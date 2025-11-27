@@ -4,6 +4,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: "2.2"
+    created: "2025-11-27T10:44:57.82260105Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: 389ds LDAP server
+    digest: aee955d158e51dc84eabb8e1697593c7cefce28c7c70c689228936834756c9c9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/389ds
+    icon: https://www.port389.org/images/logo-header-transparent.png
+    keywords:
+    - 389-ds
+    - 389ds
+    - dirsrv
+    - LDAP
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: 389ds
+    sources:
+    - https://github.com/389ds/389-ds-base/
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/389ds-0.0.3/389ds-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: first version of the chart
     apiVersion: v2
     appVersion: "2.2"
@@ -32,6 +62,35 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/389ds-0.0.1/389ds-0.0.1.tgz
     version: 0.0.1
   apacheds:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 2.0.0-AM26-startupProbe
+    created: "2025-11-27T10:44:57.956054812Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: ApacheDS is a LDAP server written in Java
+    digest: d7cde818a3025b3610070bcf849d416280e3c135d618ee2b325101e4a7296c65
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/apacheds
+    icon: https://directory.apache.org/images/header-green.png
+    keywords:
+    - LDAP
+    - ApacheDS
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: apacheds
+    sources:
+    - https://directory.apache.org/apacheds/
+    - https://github.com/TremoloSecurity/apacheds
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/apacheds-0.0.6/apacheds-0.0.6.tgz
+    version: 0.0.6
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -149,6 +208,36 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/apacheds-0.0.1/apacheds-0.0.1.tgz
     version: 0.0.1
   bind9:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: change
+          description: add https prefix in renovate comment
+    apiVersion: v2
+    appVersion: "9.19"
+    created: "2025-11-27T10:44:58.089609064Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: 61a399b32d83b0e3d105b73572501fe713fa3f5223fc201ed812035c49b76e2b
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/bind9-0.5.5/bind9-0.5.5.tgz
+    version: 0.5.5
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -300,6 +389,39 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.4.0/bind9-0.4.0.tgz
     version: 0.4.0
   blocky:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update dependency redis to 24.0.0
+    apiVersion: v2
+    appVersion: v0.28.2
+    created: "2025-11-27T10:44:58.225054418Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 98eb0b2b500bb43400c0511eb2fc2244a16797397247898f57a5b87034bbd9bd
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/blocky-11.10.0/blocky-11.10.0.tgz
+    version: 11.10.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -866,6 +988,42 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
   hedgedoc:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: renovate comment needs to be before appVersion
+    apiVersion: v2
+    appVersion: 1.10.3-ls172
+    created: "2025-11-27T10:44:58.381982257Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://nicholaswilde.github.io/helm-charts/
+      version: ~1.0.5
+    description: HedgeDoc lets you create real-time collaborative markdown notes.
+    digest: 2d4eab08da369859a3e3a127ee8af7d79982b0ded21d0785e10311d7d6b7c5d6
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/hedgedoc
+    icon: https://avatars1.githubusercontent.com/u/67865462
+    keywords:
+    - hedgedoc
+    - hedge
+    - doc
+    - markdown
+    - editor
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: hedgedoc
+    sources:
+    - https://github.com/hedgedoc/hedgedoc
+    - https://hub.docker.com/r/linuxserver/hedgedoc
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/hedgedoc-2.2.39/hedgedoc-2.2.39.tgz
+    version: 2.2.39
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -3813,6 +3971,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: use full version string v2.7.6-ls327
+        - kind: changed
+          description: use ghcr.io as registryUrl
+    apiVersion: v2
+    appVersion: v2.7.6-ls327
+    created: "2025-11-27T10:44:58.513101569Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: An Application dashboard and launcher
+    digest: a56751ea3501bb708e618851a4cc9261fdd584289d5ed09750dc253b7e88f428
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/heimdall-9.4.2/heimdall-9.4.2.tgz
+    version: 9.4.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: generate README with helm-docs
     apiVersion: v2
     appVersion: 2.2.2
@@ -3867,6 +4055,36 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/heimdall-9.0.0/heimdall-9.0.0.tgz
     version: 9.0.0
   jellyfin:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: add https prefix in renovate comment
+    apiVersion: v2
+    appVersion: 10.8.1
+    created: "2025-11-27T10:44:58.634672188Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Jellyfin is a Free Software Media System
+    digest: 604cd2526b1889d1dc72e96169c68d7d045c11e746a64ac258d1a484af7c64db
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/jellyfin
+    icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-black.svg
+    keywords:
+    - jellyfin
+    - plex
+    - emby
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: jellyfin
+    sources:
+    - https://hub.docker.com/r/jellyfin/jellyfin
+    - https://github.com/jellyfin/jellyfin
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/jellyfin-10.0.4/jellyfin-10.0.4.tgz
+    version: 10.0.4
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -3928,6 +4146,38 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/jellyfin-10.0.0/jellyfin-10.0.0.tgz
     version: 10.0.0
   kanboard:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: : add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: v1.2.48
+    created: "2025-11-27T10:44:58.763020876Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    description: Kanboard is a free and open source Kanban project management software.
+    digest: 5881d39ac327494040b22c140b7a472f3820092e68bdc823953e0e6d637db4be
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/kanboard
+    icon: https://raw.githubusercontent.com/kanboard/website/master/assets/img/icon.svg
+    keywords:
+    - kanboard
+    - kanban
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: kanboard
+    sources:
+    - https://github.com/kanboard/kanboard
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/kanboard-6.0.15/kanboard-6.0.15.tgz
+    version: 6.0.15
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -4055,6 +4305,35 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/openldap-2.0.0/openldap-2.0.0.tgz
     version: 2.0.0
   sharry:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: add https prefix in renovate comment
+    apiVersion: v2
+    appVersion: v1.15.0
+    created: "2025-11-27T10:44:58.895445758Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Sharry allows to share files with others in a simple way. It is a
+      self-hosted web application. The basic concept is to upload files and get a
+      url back that can then be shared.
+    digest: 41aeb2a8303397af472d17e558364a310dd73cb6b7305a4420b709935cbb20ea
+    home: https://github.com/johanneskastl/charts/tree/main/charts/sharry
+    icon: https://github.com/eikek/sharry/blob/master/artwork/logo.svg?raw=true
+    keywords:
+    - file sharing
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: sharry
+    sources:
+    - https://github.com/eikek/sharry
+    - https://hub.docker.com/r/eikek0/sharry
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/sharry-6.9.2/sharry-6.9.2.tgz
+    version: 6.9.2
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -4433,6 +4712,35 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/sharry-6.0.0/sharry-6.0.0.tgz
     version: 6.0.0
   syncthing:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 2.0.11
+    created: "2025-11-27T10:44:59.000091182Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Open Source Continuous File Synchronization
+    digest: a11df282c388ede55277e1012d60bde2b5b769c72a5e2426601ecb0e6a391678
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/syncthing-5.0.13/syncthing-5.0.13.tgz
+    version: 5.0.13
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -5449,6 +5757,34 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-4.0.0/syncthing-4.0.0.tgz
     version: 4.0.0
   tailscale:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update tailscale to v1.90.8
+    apiVersion: v2
+    appVersion: v1.90.8
+    created: "2025-11-27T10:44:59.130747185Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Run a tailscale subnet router in Kubernetes
+    digest: e887723a19fdf5386cc4f407e3732d2fcf999e0a402e49735180a3ace853271d
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+    keywords:
+    - tailscale
+    - vpn
+    - wireguard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: tailscale
+    sources:
+    - https://github.com/tailscale/tailscale
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/tailscale-0.32.3/tailscale-0.32.3.tgz
+    version: 0.32.3
   - annotations:
       artifacthub.io/changes: |-
         - kind: change
@@ -7163,6 +7499,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 2.0.2
+    created: "2025-11-27T10:44:59.265846578Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 5b1910aa50e968a6d3ccf7ebc0391d079165c998b5977ace608206ca706815ef
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/uptime-kuma-3.0.4/uptime-kuma-3.0.4.tgz
+    version: 3.0.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update appVersion to 1.23.16
     apiVersion: v2
     appVersion: 1.23.16
@@ -8424,6 +8790,42 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 1.34.3
+    created: "2025-11-27T10:44:59.43537445Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    description: Vaultwarden is a Bitwarden compatible server in Rust
+    digest: afc699305ee604770585566e68f8ccdd3bcd47bbe0235c20e5d56d6d170910c1
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/vaultwarden
+    icon: https://sesoodan.sirv.com/bitwarden_rs.png
+    keywords:
+    - Vaultwarden
+    - bitwardenrs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: vaultwarden
+    sources:
+    - https://github.com/dani-garcia/vaultwarden
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/vaultwarden-6.9.5/vaultwarden-6.9.5.tgz
+    version: 6.9.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update appVersion to 1.34.1
     apiVersion: v2
     appVersion: 1.34.1
@@ -9505,6 +9907,46 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update dependency redis to 24.0.0
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2025-11-27T10:44:59.583778377Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    description: A self hostable application for saving web pages, freely.
+    digest: 735e1cf13197b2e0d87728e2eeebd99810dbe5369a083708383b2590f588146a
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/wallabag
+    icon: https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png
+    keywords:
+    - wallabag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/docker
+    - https://hub.docker.com/wallabag/wallabag
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/wallabag-8.1.0/wallabag-8.1.0.tgz
+    version: 8.1.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: fixed typo in home URL
     apiVersion: v2
     appVersion: 2.4.2
@@ -9582,4 +10024,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-07-12T08:04:14.219270423Z"
+generated: "2025-11-27T10:44:59.584795812Z"
