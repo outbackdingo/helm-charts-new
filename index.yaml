@@ -392,6 +392,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update dependency redis to 24.1.0
+    apiVersion: v2
+    appVersion: v0.28.2
+    created: "2025-12-30T12:23:41.814096971Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.1.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 6dffe2c636d52496c78e859c9e3470343a3c455ac46f9ad4d32c9a9573a72d93
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/blocky-11.11.0/blocky-11.11.0.tgz
+    version: 11.11.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update dependency redis to 24.0.0
     apiVersion: v2
     appVersion: v0.28.2
@@ -988,6 +1021,42 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
   hedgedoc:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: update hedgedoc to 1.10.5-ls179
+    apiVersion: v2
+    appVersion: 1.10.5-ls179
+    created: "2025-12-30T12:23:41.97238701Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://nicholaswilde.github.io/helm-charts/
+      version: ~1.0.5
+    description: HedgeDoc lets you create real-time collaborative markdown notes.
+    digest: 3509bfef4f7266dcc6aab3ff9553c7e92d21111973e49edaea9031fb177fc4e0
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/hedgedoc
+    icon: https://avatars1.githubusercontent.com/u/67865462
+    keywords:
+    - hedgedoc
+    - hedge
+    - doc
+    - markdown
+    - editor
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: hedgedoc
+    sources:
+    - https://github.com/hedgedoc/hedgedoc
+    - https://hub.docker.com/r/linuxserver/hedgedoc
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/hedgedoc-2.2.47/hedgedoc-2.2.47.tgz
+    version: 2.2.47
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -3971,6 +4040,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update heimdall to v2.7.6-ls330
+    apiVersion: v2
+    appVersion: v2.7.6-ls330
+    created: "2025-12-30T12:23:42.191201619Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: An Application dashboard and launcher
+    digest: d06ef3eb1673d1e427ab805c08a30c0968f1d0d19658bea87e99473e0a2a6bf2
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/heimdall-9.4.5/heimdall-9.4.5.tgz
+    version: 9.4.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: use full version string v2.7.6-ls327
         - kind: changed
           description: use ghcr.io as registryUrl
@@ -4712,6 +4809,35 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/sharry-6.0.0/sharry-6.0.0.tgz
     version: 6.0.0
   syncthing:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update syncthing to 2.0.12
+    apiVersion: v2
+    appVersion: 2.0.12
+    created: "2025-12-30T12:23:42.344125461Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Open Source Continuous File Synchronization
+    digest: fab95f583b68d7de1c61c3c3370cb6f869b962a9ed2bc91ef103f476712e7394
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/syncthing-5.0.14/syncthing-5.0.14.tgz
+    version: 5.0.14
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -5757,6 +5883,34 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-4.0.0/syncthing-4.0.0.tgz
     version: 4.0.0
   tailscale:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update tailscale to v1.92.4
+    apiVersion: v2
+    appVersion: v1.92.4
+    created: "2025-12-30T12:23:42.489045722Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Run a tailscale subnet router in Kubernetes
+    digest: c3baf61a4be761b432dffa78d01af95240b595c2cb50dcde0a48135ee8db64e9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+    keywords:
+    - tailscale
+    - vpn
+    - wireguard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: tailscale
+    sources:
+    - https://github.com/tailscale/tailscale
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/tailscale-0.33.0/tailscale-0.33.0.tgz
+    version: 0.33.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -9907,6 +10061,46 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update dependency redis to 24.1.0
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2025-12-30T12:23:42.76449308Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.1.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    description: A self hostable application for saving web pages, freely.
+    digest: 8bbf4cf45311ea2b3f00e05fc3d0e82d1c765cb5b8394db2ad073092c5fc1214
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/wallabag
+    icon: https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png
+    keywords:
+    - wallabag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/docker
+    - https://hub.docker.com/wallabag/wallabag
+    urls:
+    - https://github.com/outbackdingo/helm-charts-new/releases/download/wallabag-8.2.0/wallabag-8.2.0.tgz
+    version: 8.2.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update dependency redis to 24.0.0
     apiVersion: v2
     appVersion: 2.4.2
@@ -10024,4 +10218,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-27T10:44:59.584795812Z"
+generated: "2025-12-30T12:23:42.765282053Z"
